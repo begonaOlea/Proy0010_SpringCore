@@ -4,9 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!--  beans spring -->
+	<!--  por defecto scope="singleton" una instancia para toda la aplicación -->
+	<!--  scope="prototype"   cada getBean() instancia un nuevo objeto -->
 	<bean id="saludador1" class="com.curso.beans.SaludoServiceImpl" />
     
-    <bean id="saludador2" class="com.curso.beans.SaludoServiceMejoradoImp" />
+    <bean id="saludador2" class="com.curso.beans.SaludoServiceMejoradoImp" scope="prototype" />
     
     <bean id="saludador3" class="com.curso.beans.SaludoServiceMejoradoImp" lazy-init="true"/>
     
