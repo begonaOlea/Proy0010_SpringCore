@@ -20,6 +20,11 @@ public class PruebaGranja {
 		    
 		Granja g2 = (Granja) context.getBean("granjaPerros");
 		g2.trabajosGranja();
+		
+		
+		
+		
+		
 	}
 
 }

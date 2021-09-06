@@ -7,5 +7,11 @@
   <bean id="perroCaza" class="com.curso.beans2.Perro">
       <constructor-arg type="String" value="Pomerania"></constructor-arg>
   </bean>
+  
+  <alias name="perroCaza" alias="pomerania"/>
+  
+  <bean id="granjaPomeranias" class ="com.curso.beans2.Granja">
+  	<constructor-arg ref="pomerania"></constructor-arg>
+  </bean>
 
 </beans>
