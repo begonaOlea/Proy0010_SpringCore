@@ -10,6 +10,7 @@
 		<config>src/main/resources/application-context.xml</config>
 		<config>src/main/resources/granja-beans.xml</config>
 		<config>src/main/resources/application-context-anotaciones.xml</config>
+		<config>src/main/resources/alumno-beans.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
