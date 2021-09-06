@@ -5,7 +5,12 @@
  
     <!--  beans  una granja  y un perro -->
     <!--  new Perro() -->
-    <bean id="perro" class="com.curso.beans2.Perro"/>
+    <bean id="perro" class="com.curso.beans2.Perro" />
+
+    <!--  new Perro("Pastos Belga") -->
+    <bean id="perro2" class="com.curso.beans2.Perro">
+       <constructor-arg type="String" value="Pastor Belga"> </constructor-arg>
+    </bean>
     
     <!--  new Granja(perro) -->
     <bean id="granjaPerros" class="com.curso.beans2.Granja">
