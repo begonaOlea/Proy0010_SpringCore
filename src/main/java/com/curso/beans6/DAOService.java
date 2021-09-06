@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DAOService {
-
+	
 	private static Logger log = Logger.getAnonymousLogger();
 	
 	public DAOService() {

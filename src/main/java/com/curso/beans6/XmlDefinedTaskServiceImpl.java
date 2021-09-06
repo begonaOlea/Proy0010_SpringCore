@@ -13,10 +13,13 @@ public class XmlDefinedTaskServiceImpl implements XmlDefinedTaskService {
 
 	private static Logger log = Logger.getAnonymousLogger();
 	
+	@Autowired  //inyecta una instancia de UserService (singleton)
 	private UserService userService;
-	private DAOService  daoService;
 	
 	@Autowired
+	private DAOService  daoService;
+	
+	
 	public XmlDefinedTaskServiceImpl(UserService userService, DAOService  daoService) {
 		log.info(".....instanciando XmlDefinedTaskServiceImpl");
 		this.daoService = daoService;
