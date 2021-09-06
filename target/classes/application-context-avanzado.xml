@@ -4,6 +4,16 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+	<bean id="userService" class="com.curso.beans5.UserService"></bean>
+
+	<bean id="xmlTaskService" class="com.curso.beans5.XmlDefinedTaskServiceImpl"
+	   init-method="init" destroy-method="cleanup">
+		<constructor-arg ref="userService" />
+		<constructor-arg>
+			<bean class="com.curso.beans5.DAOService"></bean>
+		</constructor-arg>
+	</bean>
+
 
 
 </beans>
