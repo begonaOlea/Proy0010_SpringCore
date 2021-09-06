@@ -15,11 +15,11 @@ public class PruebaGranja {
 		
 		// spring beans
 		
-		  ApplicationContext context =  
+		ApplicationContext context =  
 				  new ClassPathXmlApplicationContext("application-context-granja.xml");
 		    
-		  Granja g2 = (Granja) context.getBean("granjaPerros");
-		  g2.trabajosGranja();
+		Granja g2 = (Granja) context.getBean("granjaPerros");
+		g2.trabajosGranja();
 	}
 
 }
