@@ -11,6 +11,9 @@ public class PruebaGranja {
 		Granja g = new Granja(a);
 		g.trabajosGranja();
 		
+		
+		
+		
 		System.out.println("---- con spring beans ---");
 		
 		// spring beans
