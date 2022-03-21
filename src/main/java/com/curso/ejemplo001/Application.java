@@ -17,16 +17,16 @@ public class Application
 	    
           //usar el servicio para saludar
 	      
-	      SaludoService s = (SaludoService) context.getBean("saludador2");
+	      SaludoService s = (SaludoService) context.getBean("saludador");
 	      
 	      
 	      s.saludar("Maria");
 	      
 	      System.out.println(s);
 	      
-	      SaludoService s2 = (SaludoService) context.getBean("saludador2");
+	      GeneradorCartasService s2 = (GeneradorCartasService) context.getBean("generador");
 		     
-	      System.out.println(s2);
+	      s2.generarCarta();
 	      
 	      
 	}
