@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 public class GestionProfesoresServiceImp implements GestionProfesoresService {
 
 	
-	@Autowired
-	private ProfesoresRepository repositorio;
+	@Autowired   //inyecta una instancia de InMemoryProfesoresRepository
+	private ProfesoresRepository repositorio;  
 	
 	@Override
 	public Collection<Profesor> getProfesoresPorEspecialidad(String especialidad) {

@@ -2,11 +2,14 @@ package com.curso.beans9;
 
 import java.io.Serializable;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+//@Scope("prototype")
 public class Profesor implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -22,6 +25,8 @@ public class Profesor implements Serializable {
 	
 	public Profesor() {
 		super();
+		System.out.println(".......  intanciando un Profesor (prototipo");
+		this.activo = true;
 	}
 	
 	public Profesor(int id, String nombre, String especialidad, boolean activo) {
@@ -31,6 +36,19 @@ public class Profesor implements Serializable {
 		this.especialidad = especialidad;
 		this.activo = activo;
 	}
+	
+	@PostConstruct
+	public void inicializar() {
+		System.out.println("... tras construir el prosedor");
+		this.nombre = this.nombre +" cambiado";
+	}
+	
+	@PreDestroy
+	public void destruir() {
+		System.out.println("... antes de destruir el objeto");
+	}
+	
+	
 	
 	//métodos del ciclo de vida del Bean
 	
